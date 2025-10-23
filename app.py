@@ -151,7 +151,4 @@ def ask():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    # Use os.getenv and set a default port, e.g., 5000
-    port = int(os.getenv("PORT", 5000))
-    # Combine host, port, and debug mode in a single call
-    app.run(host='127.0.0.1', port=port, debug=True)
+    app.run(host='0.0.0.0', port=5000)
